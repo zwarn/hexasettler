@@ -3,36 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BoardController : MonoBehaviour {
+    public static BoardController instance;
 
-    public GameObject hex;
-    public GameObject map;
     public int size = 5;
+    public TileMap tileMap;
 
-	// Use this for initialization
-	void Start () {
-        spawnBoard();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    void spawnBoard()
-    {
-        for (int x = 0; x < size; x++)
+    void Awake() {
+        if (instance == null)
         {
-            for (int y = 0; y < size; y++)
-            {
-                spawnTile(x, y);
-            }
+            instance = this;
         }
     }
 
-    void spawnTile(int x, int y)
-    {
-        Vector3 position = new Vector3(x * 0.5f + (y % 2 == 1 ? 0f : 0.25f), y * 0.435f);
-        GameObject newTile = GameObject.Instantiate(hex, position, Quaternion.identity, map.transform);
-        newTile.name = x + " : " + y;
-    }
+    void Start () {
+        tileMap = new TileMap(size, size);
+	}
 }
