@@ -36,7 +36,8 @@ public class BoardController : MonoBehaviour {
 
     public Vector3 coordToVector3(int x, int y)
     {
-        return new Vector3(x * deltaX + (Mathf.Abs(y) % 2 == 1 ? 0f : deltaX/2), y * deltaY);
+        return new Vector3(x * deltaX + y * deltaX / 2, y * deltaY);
+        //return new Vector3(x * deltaX + (Mathf.Abs(y) % 2 == 1 ? 0f : deltaX/2), y * deltaY);
     }
 
     public void selectedTile(Tile tile)
