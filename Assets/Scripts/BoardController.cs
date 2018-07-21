@@ -20,7 +20,7 @@ public class BoardController : MonoBehaviour {
     }
 
     void Start () {
-        tileMap = new TileMap(-3, -3, 3, 3);
+        tileMap = new TileMap(5);
 	}
 
     private void Update()
@@ -37,7 +37,6 @@ public class BoardController : MonoBehaviour {
     public Vector3 coordToVector3(int x, int y)
     {
         return new Vector3(x * deltaX + y * deltaX / 2, y * deltaY);
-        //return new Vector3(x * deltaX + (Mathf.Abs(y) % 2 == 1 ? 0f : deltaX/2), y * deltaY);
     }
 
     public void selectedTile(Tile tile)

@@ -7,13 +7,16 @@ public class TileMap {
 
     private Dictionary<TilePosition, Tile> tiles;
 
-    public TileMap(int fromX, int fromY, int toX, int toY) {
+    public TileMap(int size) {
         tiles = new Dictionary<TilePosition, Tile>();
-        for (int x = fromX; x <= toX; x++)
+        for (int x = -size; x <= size; x++)
         {
-            for (int y = fromY; y <= toY; y++)
+            for (int y = -size; y <= +size; y++)
             {
-                tiles.Add(new TilePosition(x, y), new Tile(x, y));
+                if (Mathf.Abs(x + y) <= size)
+                {
+                    tiles.Add(new TilePosition(x, y), new Tile(x, y));
+                }
             }
         }
     }
