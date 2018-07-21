@@ -8,7 +8,7 @@ public class CameraController : MonoBehaviour {
     float mouseScrollSpeed = 0.05f;
     float zoomSpeed = 100f;
 
-    public Vector3 center;
+    public Vector3 scrollCenter;
     
 	void Update () {
         Camera camera = this.GetComponent<Camera>();
@@ -17,12 +17,12 @@ public class CameraController : MonoBehaviour {
 
         if (Input.GetMouseButtonDown(2))
         {
-            center = Input.mousePosition;
+            scrollCenter = Input.mousePosition;
         }
 
         if (Input.GetMouseButton(2))
         {
-            delta += (center - Input.mousePosition) * Time.deltaTime * mouseScrollSpeed;
+            delta += (scrollCenter - Input.mousePosition) * Time.deltaTime * mouseScrollSpeed;
         }
 
         camera.transform.Translate(delta);
