@@ -10,6 +10,8 @@ public class BoardController : MonoBehaviour {
     public float deltaY = 1.5f;
     public TileMap tileMap;
 
+    private Tile currentlySelected = null;
+
     void Awake() {
         if (instance == null)
         {
@@ -21,8 +23,32 @@ public class BoardController : MonoBehaviour {
         tileMap = new TileMap(size, size);
 	}
 
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (currentlySelected != null)
+            {
+                currentlySelected.addRoad(Direction.NoWhere);
+            }
+        }
+    }
+
     public Vector3 coordToVector3(int x, int y)
     {
         return new Vector3(x * deltaX + (y % 2 == 1 ? 0f : deltaX/2), y * deltaY);
+    }
+
+    public void selectedTile(Tile tile)
+    {
+        currentlySelected = tile;
+    }
+
+    public void deselectTile(Tile tile)
+    {
+        if (currentlySelected == tile)
+        {
+            currentlySelected = null;
+        }
     }
 }
