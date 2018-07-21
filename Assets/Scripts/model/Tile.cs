@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Tile {
-    private int posX;
-    private int posY;
     private GameObject tileObject;
     private TileView tileView;
 
@@ -13,8 +11,6 @@ public class Tile {
 
     public Tile(int posX, int posY)
     {
-        this.posX = posX;
-        this.posY = posY;
         tileObject = Spawner.instance.spawnTile(posX, posY);
         tileView = tileObject.GetComponent<TileView>();
         tileView.link(this);
