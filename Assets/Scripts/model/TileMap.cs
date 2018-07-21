@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TileMap {
-    private Tile[,] tiles;
 
-    public TileMap(int sizeX, int sizeY) {
-        tiles = new Tile[sizeX,sizeY];
-        for (int x = 0; x < sizeX; x++ )
+
+    private Dictionary<TilePosition, Tile> tiles;
+
+    public TileMap(int fromX, int fromY, int toX, int toY) {
+        tiles = new Dictionary<TilePosition, Tile>();
+        for (int x = fromX; x <= toX; x++)
         {
-            for (int y = 0; y < sizeY; y++)
+            for (int y = fromY; y <= toY; y++)
             {
-                tiles[x, y] = new Tile(x, y);
+                tiles.Add(new TilePosition(x, y), new Tile(x, y));
             }
         }
     }
