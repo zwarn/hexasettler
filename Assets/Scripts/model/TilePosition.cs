@@ -14,8 +14,8 @@ public class TilePosition {
 
     public static List<TilePosition> baseDirections = new List<TilePosition> { West, SouthWest, SouthEast, East, NorthEast, NorthWest };
 
-    int x;
-    int y;
+    public int x;
+    public int y;
 
     public TilePosition(int x, int y)
     {
@@ -33,9 +33,33 @@ public class TilePosition {
         return baseDirections.Select(dir => this + dir).ToList<TilePosition>();
     }
 
+    public int toIndex()
+    {
+        return baseDirections.FindIndex(dir => dir.Equals(this));
+    }
+
+    public static int toIndex(TilePosition tilePostion)
+    {
+        return tilePostion.toIndex();
+    }
+
+    public static TilePosition fromIndex(int index)
+    {
+        if (index < 0 || index > 5)
+        {
+            throw new IndexOutOfRangeException();
+        }
+        return baseDirections.ElementAt(index);
+    }
+
     public static TilePosition operator +(TilePosition p1, TilePosition p2)
     {
         return new TilePosition(p1.x + p2.x, p1.y + p2.y);
+    }
+
+    public static TilePosition operator -(TilePosition p1, TilePosition p2)
+    {
+        return new TilePosition(p1.x - p2.x, p1.y - p2.y);
     }
 
     public override bool Equals(Object obj)

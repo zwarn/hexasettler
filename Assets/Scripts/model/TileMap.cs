@@ -5,7 +5,7 @@ using UnityEngine;
 public class TileMap {
 
 
-    private Dictionary<TilePosition, Tile> tiles;
+    public Dictionary<TilePosition, Tile> tiles;
 
     public TileMap(int size) {
         tiles = new Dictionary<TilePosition, Tile>();
@@ -15,7 +15,8 @@ public class TileMap {
             {
                 if (Mathf.Abs(x + y) <= size)
                 {
-                    tiles.Add(new TilePosition(x, y), new Tile(x, y));
+                    TilePosition tilePosition = new TilePosition(x, y);
+                    tiles.Add(tilePosition, new Tile(tilePosition));
                 }
             }
         }

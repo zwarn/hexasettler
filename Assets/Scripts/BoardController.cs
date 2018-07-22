@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BoardController : MonoBehaviour {
@@ -29,10 +30,28 @@ public class BoardController : MonoBehaviour {
         {
             if (currentlySelected != null)
             {
-                // TODO: fix
-                // currentlySelected.addRoad(Direction.NoWhere);
+                currentlySelected.addRoad();
+                connectWithNeighbors(currentlySelected);
+                neighborTiles(currentlySelected).ForEach(tile => connectWithThis(currentlySelected, tile));
             }
         }
+    }
+
+    private List<Tile> neighborTiles(Tile tile)
+    {
+        List<TilePosition> neighborPositions = tile.tilePosition.getNeighbors();
+        return neighborPositions.Where(position => tileMap.tiles.ContainsKey(position)).Select(position => tileMap.tiles[position]).ToList();
+    }
+
+    private void connectWithThis(Tile from, Tile to)
+    {
+        to.connectRoad(from.tilePosition - to.tilePosition);
+    } 
+
+    private void connectWithNeighbors(Tile tile)
+    {
+        TilePosition tilePosition = tile.tilePosition;
+        tile.connectRoad(TilePosition.baseDirections.Where(direction => tileMap.tiles.ContainsKey(direction + tilePosition) && tileMap.tiles[direction + tilePosition].road).ToList());
     }
 
     public Vector3 coordToVector3(int x, int y)
