@@ -29,7 +29,8 @@ public class BoardController : MonoBehaviour {
         {
             if (currentlySelected != null)
             {
-                currentlySelected.addRoad(Direction.NoWhere);
+                // TODO: fix
+                // currentlySelected.addRoad(Direction.NoWhere);
             }
         }
     }
