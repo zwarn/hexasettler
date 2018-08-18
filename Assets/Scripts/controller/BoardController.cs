@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using controller;
 using model.map;
 using UnityEngine;
 
@@ -32,6 +33,9 @@ public class BoardController : MonoBehaviour {
             if (_currentlySelected != null)
             {
                 _currentlySelected.AddRoad();
+                _currentlySelected.Road.UpdateView();
+                var neighborRoads = MapHelper.GetNeighborRoads(_currentlySelected.Position).ToList();
+                neighborRoads.ForEach(road => road.UpdateView());
             }
         }
     }

@@ -5,17 +5,23 @@
     <e p="C:\Users\Zwarn\Documents\GitHub\hexasettler" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets\Scripts" t="Include">
-        <e p="BoardController.cs" t="Include" />
-        <e p="CameraController.cs" t="Include" />
+        <e p="controller" t="Include">
+          <e p="BoardController.cs" t="Include" />
+          <e p="CameraController.cs" t="Include" />
+          <e p="MapHelper.cs" t="Include" />
+          <e p="Spawner.cs" t="Include" />
+        </e>
         <e p="model" t="Include">
           <e p="map" t="Include">
             <e p="Hex.cs" t="Include" />
             <e p="Map.cs" t="Include" />
             <e p="Road.cs" t="Include" />
           </e>
-          <e p="TilePosition.cs" t="Include" />
+          <e p="Position" t="Include">
+            <e p="BaseDirection.cs" t="Include" />
+            <e p="TilePosition.cs" t="Include" />
+          </e>
         </e>
-        <e p="Spawner.cs" t="Include" />
         <e p="view" t="Include">
           <e p="HexView.cs" t="Include" />
           <e p="RoadView.cs" t="Include" />

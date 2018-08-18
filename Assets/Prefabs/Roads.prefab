@@ -35,6 +35,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4945415176412138}
+  - component: {fileID: 114662563146433896}
   m_Layer: 0
   m_Name: Roads
   m_TagString: Untagged
@@ -249,6 +250,23 @@ Transform:
   m_Father: {fileID: 4945415176412138}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114662563146433896
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1302908940732174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66aaae4207bc41fba7a084ae72ff4b5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roadE: {fileID: 1563358925483760}
+  roadSE: {fileID: 1656770903347328}
+  roadSW: {fileID: 1645780640770826}
+  roadW: {fileID: 1340602090032300}
+  roadNW: {fileID: 1928143122260652}
+  roadNE: {fileID: 1793507524906892}
 --- !u!212 &212189418571999860
 SpriteRenderer:
   m_ObjectHideFlags: 1

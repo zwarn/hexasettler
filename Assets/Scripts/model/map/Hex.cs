@@ -1,11 +1,12 @@
-﻿using UnityEngine;
+﻿using model.position;
+using UnityEngine;
 using view;
 
 namespace model.map
 {
     public class Hex
     {
-        private Road _road;
+        public Road Road { get; private set; }
         public TilePosition Position { get; private set; }
         public GameObject GameObject { get; private set; }
 
@@ -19,7 +20,7 @@ namespace model.map
 
         public void AddRoad()
         {
-            _road = new Road(this);
+            Road = new Road(this);
         }
     }
 }

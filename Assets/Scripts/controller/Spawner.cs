@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using model;
 using model.map;
+using model.position;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour {
