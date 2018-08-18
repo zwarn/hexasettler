@@ -9,14 +9,15 @@
         <e p="CameraController.cs" t="Include" />
         <e p="model" t="Include">
           <e p="map" t="Include">
+            <e p="Hex.cs" t="Include" />
             <e p="Map.cs" t="Include" />
             <e p="Road.cs" t="Include" />
-            <e p="Tile.cs" t="Include" />
           </e>
           <e p="TilePosition.cs" t="Include" />
         </e>
         <e p="Spawner.cs" t="Include" />
         <e p="view" t="Include">
+          <e p="RoadView.cs" t="Include" />
           <e p="TileView.cs" t="Include" />
         </e>
       </e>

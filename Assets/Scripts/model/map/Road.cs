@@ -1,14 +1,18 @@
-﻿namespace model.map
+﻿using UnityEngine;
+
+namespace model.map
 {
     public class Road
     {
-        private TilePosition _position;
-        private bool _road = false;
+        private Hex _hex;
+        private GameObject _gameObject;
         //TODO: roadview
                 
-        public Road(TilePosition position)
+        public Road(Hex hex)
         {
-            _position = position;
+            _hex = hex;
+            _gameObject = Spawner.Instance.SpawnRoad(_hex.Position, _hex.GameObject);
         }
+        
     }
 }

@@ -11,7 +11,7 @@ public class BoardController : MonoBehaviour {
     public float DeltaX = 1.735f;
     public float DeltaY = 1.5f;
 
-    private Tile _currentlySelected;
+    private Hex _currentlySelected;
     private Map _map;
 
     void Awake() {
@@ -41,14 +41,14 @@ public class BoardController : MonoBehaviour {
         return new Vector3(x * DeltaX + y * DeltaX / 2, y * DeltaY);
     }
 
-    public void selectedTile(Tile tile)
+    public void selectedTile(Hex hex)
     {
-        _currentlySelected = tile;
+        _currentlySelected = hex;
     }
 
-    public void deselectTile(Tile tile)
+    public void deselectTile(Hex hex)
     {
-        if (_currentlySelected == tile)
+        if (_currentlySelected == hex)
         {
             _currentlySelected = null;
         }

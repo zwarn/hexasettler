@@ -1,34 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using model.map;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour {
 
-    public static Spawner instance;
+    public static Spawner Instance;
 
-    public GameObject tile;
-    public GameObject map;
+    public GameObject TileObject;
+    public GameObject RoadObject;
+    public GameObject Map;
 
-    private BoardController boardController;
+    private BoardController _boardController;
 
-    public GameObject spawnTile(int x, int y)
+    public GameObject SpawnHex(int x, int y)
     {
-        Vector3 position = boardController.coordToVector3(x, y);
-        GameObject newTile = Instantiate(tile, position, Quaternion.identity, map.transform);
+        Vector3 position = _boardController.coordToVector3(x, y);
+        GameObject newTile = Instantiate(TileObject, position, Quaternion.identity, Map.transform);
         newTile.name = x + " : " + y;
         return newTile;
     }
 
     void Start()
     {
-        boardController = BoardController.Instance;
+        _boardController = BoardController.Instance;
     }
 
     void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
         }
+    }
+
+    public GameObject SpawnRoad(TilePosition tilePosition, GameObject parent)
+    {
+        Vector3 position = _boardController.coordToVector3(tilePosition.x, tilePosition.y);
+        return Instantiate(RoadObject, position, Quaternion.identity, parent.transform);
     }
 }
