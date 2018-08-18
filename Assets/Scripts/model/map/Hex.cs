@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using view;
 
 namespace model.map
 {
@@ -12,6 +13,8 @@ namespace model.map
         {
             Position = tilePosition;
             GameObject = Spawner.Instance.SpawnHex(Position.x, Position.y);
+            HexView hexView = GameObject.GetComponent<HexView>();
+            hexView.Link(this);
         }
 
         public void AddRoad()

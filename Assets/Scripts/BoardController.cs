@@ -22,7 +22,7 @@ public class BoardController : MonoBehaviour {
     }
 
     void Start () {
-        _map = new Map(5);
+        _map = new Map(Size);
 	}
 
     private void Update()
@@ -31,22 +31,22 @@ public class BoardController : MonoBehaviour {
         {
             if (_currentlySelected != null)
             {
-             // TODO: make roads working again   
+                _currentlySelected.AddRoad();
             }
         }
     }
 
-    public Vector3 coordToVector3(int x, int y)
+    public Vector3 CoordToVector3(int x, int y)
     {
         return new Vector3(x * DeltaX + y * DeltaX / 2, y * DeltaY);
     }
 
-    public void selectedTile(Hex hex)
+    public void SelectedTile(Hex hex)
     {
         _currentlySelected = hex;
     }
 
-    public void deselectTile(Hex hex)
+    public void DeselectTile(Hex hex)
     {
         if (_currentlySelected == hex)
         {

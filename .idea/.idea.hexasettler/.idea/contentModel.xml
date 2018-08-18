@@ -17,8 +17,8 @@
         </e>
         <e p="Spawner.cs" t="Include" />
         <e p="view" t="Include">
+          <e p="HexView.cs" t="Include" />
           <e p="RoadView.cs" t="Include" />
-          <e p="TileView.cs" t="Include" />
         </e>
       </e>
       <e p="hexasettler.sln" t="IncludeFlat" />

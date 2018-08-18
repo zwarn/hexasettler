@@ -204,6 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07602830212d9ed44b03ccd81d43a7b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scrollCenter: {x: 0, y: 0, z: 0}
 --- !u!1 &814582100
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,8 +261,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdf39b3ae17d94f4b8246a1b0cbaed90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tile: {fileID: 1602095826961424, guid: 860def44b0b712e48a479c7bb0452e07, type: 2}
-  map: {fileID: 814582100}
+  TileObject: {fileID: 1583421173471986, guid: 70459ad15e8e0cd4ba99d18912a5346f, type: 2}
+  RoadObject: {fileID: 1302908940732174, guid: 3b6dd2257f975f94583a6a35c9f99a17, type: 2}
+  Map: {fileID: 814582100}
 --- !u!114 &1433407593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,9 +275,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 757a0c476a765f941803b492b1695c3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 5
-  deltaX: 1.735
-  deltaY: 1.5
+  Size: 5
+  DeltaX: 1.735
+  DeltaY: 1.5
 --- !u!4 &1433407594
 Transform:
   m_ObjectHideFlags: 0
