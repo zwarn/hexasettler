@@ -1,74 +1,56 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using model.map;
 using UnityEngine;
 
 public class BoardController : MonoBehaviour {
-    public static BoardController instance;
+    public static BoardController Instance { get; private set; }
 
-    public int size = 5;
-    public float deltaX = 1.735f;
-    public float deltaY = 1.5f;
-    public TileMap tileMap;
+    public int Size = 5;
+    public float DeltaX = 1.735f;
+    public float DeltaY = 1.5f;
 
-    private Tile currentlySelected = null;
+    private Tile _currentlySelected;
+    private Map _map;
 
     void Awake() {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
         }
     }
 
     void Start () {
-        tileMap = new TileMap(5);
+        _map = new Map(5);
 	}
 
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (currentlySelected != null)
+            if (_currentlySelected != null)
             {
-                currentlySelected.addRoad();
-                connectWithNeighbors(currentlySelected);
-                neighborTiles(currentlySelected).ForEach(tile => connectWithThis(currentlySelected, tile));
+             // TODO: make roads working again   
             }
         }
     }
 
-    private List<Tile> neighborTiles(Tile tile)
-    {
-        List<TilePosition> neighborPositions = tile.tilePosition.getNeighbors();
-        return neighborPositions.Where(position => tileMap.tiles.ContainsKey(position)).Select(position => tileMap.tiles[position]).ToList();
-    }
-
-    private void connectWithThis(Tile from, Tile to)
-    {
-        to.connectRoad(from.tilePosition - to.tilePosition);
-    } 
-
-    private void connectWithNeighbors(Tile tile)
-    {
-        TilePosition tilePosition = tile.tilePosition;
-        tile.connectRoad(TilePosition.baseDirections.Where(direction => tileMap.tiles.ContainsKey(direction + tilePosition) && tileMap.tiles[direction + tilePosition].road).ToList());
-    }
-
     public Vector3 coordToVector3(int x, int y)
     {
-        return new Vector3(x * deltaX + y * deltaX / 2, y * deltaY);
+        return new Vector3(x * DeltaX + y * DeltaX / 2, y * DeltaY);
     }
 
     public void selectedTile(Tile tile)
     {
-        currentlySelected = tile;
+        _currentlySelected = tile;
     }
 
     public void deselectTile(Tile tile)
     {
-        if (currentlySelected == tile)
+        if (_currentlySelected == tile)
         {
-            currentlySelected = null;
+            _currentlySelected = null;
         }
     }
 }

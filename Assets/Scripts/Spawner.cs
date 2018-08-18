@@ -14,14 +14,14 @@ public class Spawner : MonoBehaviour {
     public GameObject spawnTile(int x, int y)
     {
         Vector3 position = boardController.coordToVector3(x, y);
-        GameObject newTile = GameObject.Instantiate(tile, position, Quaternion.identity, map.transform);
+        GameObject newTile = Instantiate(tile, position, Quaternion.identity, map.transform);
         newTile.name = x + " : " + y;
         return newTile;
     }
 
     void Start()
     {
-        boardController = BoardController.instance;
+        boardController = BoardController.Instance;
     }
 
     void Awake()

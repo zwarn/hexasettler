@@ -8,11 +8,12 @@
         <e p="BoardController.cs" t="Include" />
         <e p="CameraController.cs" t="Include" />
         <e p="model" t="Include">
-          <e p="Position" t="Include">
-            <e p="TilePosition.cs" t="Include" />
+          <e p="map" t="Include">
+            <e p="Map.cs" t="Include" />
+            <e p="Road.cs" t="Include" />
+            <e p="Tile.cs" t="Include" />
           </e>
-          <e p="Tile.cs" t="Include" />
-          <e p="TileMap.cs" t="Include" />
+          <e p="TilePosition.cs" t="Include" />
         </e>
         <e p="Spawner.cs" t="Include" />
         <e p="view" t="Include">

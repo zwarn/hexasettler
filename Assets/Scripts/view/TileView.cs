@@ -1,60 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class TileView : MonoBehaviour {
+namespace view
+{
+    public class TileView : MonoBehaviour {
 
-    public GameObject roadM;
-    public GameObject roadW;
-    public GameObject roadSW;
-    public GameObject roadSE;
-    public GameObject roadE;
-    public GameObject roadNE;
-    public GameObject roadNW;
+        public Tile Tile;
+        private BoardController _boardController;
 
-    public GameObject[] roads;
-
-    public Tile tile;
-    private BoardController boardController;
-
-    public void Awake()
-    {
-        boardController = BoardController.instance;
-    }
-
-    public void Start()
-    {
-        roads = new GameObject[] { roadW, roadSW, roadSE, roadE, roadNE, roadNW };
-    }
-
-    public void link(Tile tile)
-    {
-        this.tile = tile;
-    }
-
-    public void updateView()
-    {
-        if (tile.road)
+        public void Awake()
         {
-            roadM.GetComponent<SpriteRenderer>().enabled = true;
-
-            for (int i = 0; i < 6; i++)
-            {
-                roads[i].GetComponent<SpriteRenderer>().enabled = tile.roads[i];
-            }
-
+            _boardController = BoardController.Instance;
         }
-    }
 
-    private void OnMouseEnter()
-    {
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(0.9f, 0.9f, 0.9f);
-        boardController.selectedTile(tile);
-    }
+        private void OnMouseEnter()
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(0.9f, 0.9f, 0.9f);
+            _boardController.selectedTile(Tile);
+        }
 
-    private void OnMouseExit()
-    {
-        gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
-        boardController.deselectTile(tile);
+        private void OnMouseExit()
+        {
+            gameObject.GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f);
+            _boardController.deselectTile(Tile);
+        }
     }
 }
