@@ -1,30 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Zwarn\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_hexasettler.-1257972710.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Zwarn\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Zwarn\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_hexasettler.-1257972710.00" t="ExcludeRecursive" />
     <e p="C:\Users\Zwarn\Documents\GitHub\hexasettler" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
-      <e p="Assets\Scripts" t="Include">
-        <e p="controller" t="Include">
-          <e p="BoardController.cs" t="Include" />
-          <e p="CameraController.cs" t="Include" />
-          <e p="MapHelper.cs" t="Include" />
-          <e p="Spawner.cs" t="Include" />
-        </e>
-        <e p="model" t="Include">
-          <e p="map" t="Include">
-            <e p="Hex.cs" t="Include" />
-            <e p="Map.cs" t="Include" />
-            <e p="Road.cs" t="Include" />
+      <e p="Assets" t="Include">
+        <e p="Scripts" t="Include">
+          <e p="controller" t="Include">
+            <e p="BoardController.cs" t="Include" />
+            <e p="CameraController.cs" t="Include" />
+            <e p="MapHelper.cs" t="Include" />
+            <e p="Spawner.cs" t="Include" />
           </e>
-          <e p="Position" t="Include">
-            <e p="BaseDirection.cs" t="Include" />
-            <e p="TilePosition.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="MapEditor.cs" t="Include" />
           </e>
-        </e>
-        <e p="view" t="Include">
-          <e p="HexView.cs" t="Include" />
-          <e p="RoadView.cs" t="Include" />
+          <e p="model" t="Include">
+            <e p="map" t="Include">
+              <e p="Hex.cs" t="Include" />
+              <e p="Map.cs" t="Include" />
+              <e p="Road.cs" t="Include" />
+            </e>
+            <e p="Position" t="Include">
+              <e p="BaseDirection.cs" t="Include" />
+              <e p="TilePosition.cs" t="Include" />
+            </e>
+          </e>
+          <e p="view" t="Include">
+            <e p="HexView.cs" t="Include" />
+            <e p="RoadView.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="hexasettler.sln" t="IncludeFlat" />
