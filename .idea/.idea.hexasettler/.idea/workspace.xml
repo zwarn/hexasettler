@@ -18,22 +18,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cs" value="11" />
+          <entry key="cs" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="11" />
+          <entry key="C#" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="1437" />
+          <entry key="cs" value="1920" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="1437" />
+          <entry key="C#" value="1920" />
         </counts>
       </usages-collector>
     </session>
@@ -43,18 +43,19 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Editor/MapEditor.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+            <state relative-caret-position="670">
+              <caret line="51" column="99" selection-start-line="51" selection-start-column="99" selection-end-line="51" selection-end-column="99" />
               <folding>
-                <marker date="1537383920063" expanded="true" signature="6:56" ph="..." />
-                <marker date="1537383920063" expanded="true" signature="74:1373" ph="{...}" />
-                <marker date="1537383920063" expanded="true" signature="118:1371" ph="{...}" />
-                <marker date="1537383920063" expanded="true" signature="285:348" ph="{...}" />
-                <marker date="1537383920063" expanded="true" signature="400:1135" ph="{...}" />
-                <marker date="1537383920063" expanded="true" signature="601:1125" ph="{...}" />
-                <marker date="1537383920063" expanded="true" signature="851:1111" ph="{...}" />
-                <marker date="1537383920063" expanded="true" signature="1168:1242" ph="{...}" />
-                <marker date="1537383920063" expanded="true" signature="1271:1365" ph="{...}" />
+                <marker date="1538075983018" expanded="true" signature="6:56" ph="..." />
+                <marker date="1538075983018" expanded="true" signature="74:2030" ph="{...}" />
+                <marker date="1538075983018" expanded="true" signature="118:2028" ph="{...}" />
+                <marker date="1538075983018" expanded="true" signature="460:589" ph="{...}" />
+                <marker date="1538075983018" expanded="true" signature="641:1397" ph="{...}" />
+                <marker date="1538075983018" expanded="true" signature="865:1387" ph="{...}" />
+                <marker date="1538075983018" expanded="true" signature="1113:1373" ph="{...}" />
+                <marker date="1538075983018" expanded="true" signature="1430:1504" ph="{...}" />
+                <marker date="1538075983018" expanded="true" signature="1533:1749" ph="{...}" />
+                <marker date="1538075983018" expanded="true" signature="1817:2022" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -83,6 +84,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
               <caret line="956" column="22" selection-start-line="956" selection-start-column="22" selection-end-line="956" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5B31EB06-5BB6-4EB7-AD77-7AEA8C9D898C/3c/9e2bae2a/GUIContent.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -132,29 +142,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/controller/BoardController.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
-              <folding>
-                <marker date="1534611263820" expanded="false" signature="6:132" ph="..." />
-                <marker date="1534611263820" expanded="true" signature="179:1361" ph="{...}" />
-                <marker date="1534611263820" expanded="true" signature="415:501" ph="{...}" />
-                <marker date="1534611263820" expanded="true" signature="446:495" ph="{...}" />
-                <marker date="1534611263820" expanded="true" signature="521:555" ph="{...}" />
-                <marker date="1534611263820" expanded="true" signature="582:995" ph="{...}" />
-                <marker date="1534611263820" expanded="true" signature="629:989" ph="{...}" />
-                <marker date="1534611263820" expanded="true" signature="683:979" ph="{...}" />
-                <marker date="1534611263820" expanded="true" signature="1044:1125" ph="{...}" />
-                <marker date="1534611263820" expanded="true" signature="1164:1210" ph="{...}" />
-                <marker date="1534611263820" expanded="true" signature="1249:1359" ph="{...}" />
-                <marker date="1534611263820" expanded="true" signature="1294:1353" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -168,6 +155,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/model/map/Hex.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5B31EB06-5BB6-4EB7-AD77-7AEA8C9D898C/3c/9e2bae2a/GUIContent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/model/map/Road.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2B23D219-9AE9-47FE-B6BA-2DBC1517A519/17/637e5187/MouseButton.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/46892B62-87CE-45C1-AC83-2E0BCC836C80/b3/6a13b842/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
@@ -223,7 +211,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="162" />
     <option name="y" value="128" />
     <option name="width" value="1440" />
@@ -308,9 +296,9 @@
       <option name="pid" />
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" pid="14232">
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="14232" />
       <method v="2" />
     </configuration>
     <list>
@@ -354,15 +342,15 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32900432" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="NuGet" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unity" order="9" />
+      <window_info anchor="bottom" id="Unity" order="9" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" order="11" />
       <window_info anchor="bottom" id="Terminal" order="12" />
@@ -583,13 +571,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5B31EB06-5BB6-4EB7-AD77-7AEA8C9D898C/8a/f9f87b3b/GUILayout.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="956" column="22" selection-start-line="956" selection-start-column="22" selection-end-line="956" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F718FBF7-147E-4022-82FD-ACF37BDD8584/fa/cb8610f8/GameObject.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
@@ -604,20 +585,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5B31EB06-5BB6-4EB7-AD77-7AEA8C9D898C/3c/9e2bae2a/GUIContent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="15" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5B31EB06-5BB6-4EB7-AD77-7AEA8C9D898C/8a/f9f87b3b/GUILayout.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="956" column="22" selection-start-line="956" selection-start-column="22" selection-end-line="956" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Editor/MapEditor.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+        <state relative-caret-position="670">
+          <caret line="51" column="99" selection-start-line="51" selection-start-column="99" selection-end-line="51" selection-end-column="99" />
           <folding>
-            <marker date="1537383920063" expanded="true" signature="6:56" ph="..." />
-            <marker date="1537383920063" expanded="true" signature="74:1373" ph="{...}" />
-            <marker date="1537383920063" expanded="true" signature="118:1371" ph="{...}" />
-            <marker date="1537383920063" expanded="true" signature="285:348" ph="{...}" />
-            <marker date="1537383920063" expanded="true" signature="400:1135" ph="{...}" />
-            <marker date="1537383920063" expanded="true" signature="601:1125" ph="{...}" />
-            <marker date="1537383920063" expanded="true" signature="851:1111" ph="{...}" />
-            <marker date="1537383920063" expanded="true" signature="1168:1242" ph="{...}" />
-            <marker date="1537383920063" expanded="true" signature="1271:1365" ph="{...}" />
+            <marker date="1538075983018" expanded="true" signature="6:56" ph="..." />
+            <marker date="1538075983018" expanded="true" signature="74:2030" ph="{...}" />
+            <marker date="1538075983018" expanded="true" signature="118:2028" ph="{...}" />
+            <marker date="1538075983018" expanded="true" signature="460:589" ph="{...}" />
+            <marker date="1538075983018" expanded="true" signature="641:1397" ph="{...}" />
+            <marker date="1538075983018" expanded="true" signature="865:1387" ph="{...}" />
+            <marker date="1538075983018" expanded="true" signature="1113:1373" ph="{...}" />
+            <marker date="1538075983018" expanded="true" signature="1430:1504" ph="{...}" />
+            <marker date="1538075983018" expanded="true" signature="1533:1749" ph="{...}" />
+            <marker date="1538075983018" expanded="true" signature="1817:2022" ph="{...}" />
           </folding>
         </state>
       </provider>
