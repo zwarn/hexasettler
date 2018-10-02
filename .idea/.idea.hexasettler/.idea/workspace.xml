@@ -18,22 +18,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="cs" value="12" />
+          <entry key="cs" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="C#" value="12" />
+          <entry key="C#" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="1920" />
+          <entry key="cs" value="2022" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="1920" />
+          <entry key="C#" value="2022" />
         </counts>
       </usages-collector>
     </session>
@@ -43,20 +43,36 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Editor/MapEditor.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="670">
-              <caret line="51" column="99" selection-start-line="51" selection-start-column="99" selection-end-line="51" selection-end-column="99" />
+            <state relative-caret-position="450">
+              <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
               <folding>
-                <marker date="1538075983018" expanded="true" signature="6:56" ph="..." />
-                <marker date="1538075983018" expanded="true" signature="74:2030" ph="{...}" />
-                <marker date="1538075983018" expanded="true" signature="118:2028" ph="{...}" />
-                <marker date="1538075983018" expanded="true" signature="460:589" ph="{...}" />
-                <marker date="1538075983018" expanded="true" signature="641:1397" ph="{...}" />
-                <marker date="1538075983018" expanded="true" signature="865:1387" ph="{...}" />
-                <marker date="1538075983018" expanded="true" signature="1113:1373" ph="{...}" />
-                <marker date="1538075983018" expanded="true" signature="1430:1504" ph="{...}" />
-                <marker date="1538075983018" expanded="true" signature="1533:1749" ph="{...}" />
-                <marker date="1538075983018" expanded="true" signature="1817:2022" ph="{...}" />
+                <marker date="1538511523152" expanded="true" signature="6:56" ph="..." />
+                <marker date="1538511523152" expanded="true" signature="74:1918" ph="{...}" />
+                <marker date="1538511523152" expanded="true" signature="170:1916" ph="{...}" />
+                <marker date="1538511523152" expanded="true" signature="479:1235" ph="{...}" />
+                <marker date="1538511523152" expanded="true" signature="703:1225" ph="{...}" />
+                <marker date="1538511523152" expanded="true" signature="951:1211" ph="{...}" />
+                <marker date="1538511523152" expanded="true" signature="1290:1637" ph="{...}" />
+                <marker date="1538511523152" expanded="true" signature="1705:1910" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BA02472E-4F0E-4CA7-8780-EBC889B6290C/4d/e96e85fe/EditMode.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="371">
+              <caret line="320" column="25" selection-start-line="320" selection-start-column="25" selection-end-line="320" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BA02472E-4F0E-4CA7-8780-EBC889B6290C/a6/72afd910/Editor.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3555">
+              <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -124,24 +140,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5B31EB06-5BB6-4EB7-AD77-7AEA8C9D898C/13/bc0e00b8/GUIUtility.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-287">
-              <caret line="190" column="22" selection-start-line="190" selection-start-column="22" selection-end-line="190" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5B31EB06-5BB6-4EB7-AD77-7AEA8C9D898C/01/a034d066/FocusType.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -166,9 +164,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/model/position/TilePosition.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5B31EB06-5BB6-4EB7-AD77-7AEA8C9D898C/13/bc0e00b8/GUIUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Editor/MapEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BA02472E-4F0E-4CA7-8780-EBC889B6290C/a6/72afd910/Editor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5B31EB06-5BB6-4EB7-AD77-7AEA8C9D898C/01/a034d066/FocusType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/MapHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/BoardController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BA02472E-4F0E-4CA7-8780-EBC889B6290C/4d/e96e85fe/EditMode.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/controller/Spawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/view/HexView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5B31EB06-5BB6-4EB7-AD77-7AEA8C9D898C/85/9423822a/Event.cs" root0="SKIP_HIGHLIGHTING" />
@@ -599,21 +599,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BA02472E-4F0E-4CA7-8780-EBC889B6290C/a6/72afd910/Editor.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3555">
+          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BA02472E-4F0E-4CA7-8780-EBC889B6290C/4d/e96e85fe/EditMode.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="320" column="25" selection-start-line="320" selection-start-column="25" selection-end-line="320" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Editor/MapEditor.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="51" column="99" selection-start-line="51" selection-start-column="99" selection-end-line="51" selection-end-column="99" />
+        <state relative-caret-position="450">
+          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
           <folding>
-            <marker date="1538075983018" expanded="true" signature="6:56" ph="..." />
-            <marker date="1538075983018" expanded="true" signature="74:2030" ph="{...}" />
-            <marker date="1538075983018" expanded="true" signature="118:2028" ph="{...}" />
-            <marker date="1538075983018" expanded="true" signature="460:589" ph="{...}" />
-            <marker date="1538075983018" expanded="true" signature="641:1397" ph="{...}" />
-            <marker date="1538075983018" expanded="true" signature="865:1387" ph="{...}" />
-            <marker date="1538075983018" expanded="true" signature="1113:1373" ph="{...}" />
-            <marker date="1538075983018" expanded="true" signature="1430:1504" ph="{...}" />
-            <marker date="1538075983018" expanded="true" signature="1533:1749" ph="{...}" />
-            <marker date="1538075983018" expanded="true" signature="1817:2022" ph="{...}" />
+            <marker date="1538511523152" expanded="true" signature="6:56" ph="..." />
+            <marker date="1538511523152" expanded="true" signature="74:1918" ph="{...}" />
+            <marker date="1538511523152" expanded="true" signature="170:1916" ph="{...}" />
+            <marker date="1538511523152" expanded="true" signature="479:1235" ph="{...}" />
+            <marker date="1538511523152" expanded="true" signature="703:1225" ph="{...}" />
+            <marker date="1538511523152" expanded="true" signature="951:1211" ph="{...}" />
+            <marker date="1538511523152" expanded="true" signature="1290:1637" ph="{...}" />
+            <marker date="1538511523152" expanded="true" signature="1705:1910" ph="{...}" />
           </folding>
         </state>
       </provider>

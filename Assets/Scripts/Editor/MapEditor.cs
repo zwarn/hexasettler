@@ -4,31 +4,24 @@ using UnityEngine;
 
 namespace Editor
 {
-    public class MapEditor : EditorWindow
+    [CustomEditor( typeof( BoardController))]
+    public class MapEditor : UnityEditor.Editor
     {
         private int _layerSelection;
         private string[] _layerOptions = {"nothing", "terrain", "objects"};
         private int _terrainSelection;
         private string[] _terrainOptions = {"gras", "dirt"};
         private static GameObject[] _terrains;
-
-
-        [MenuItem("Window/MapEditor")]
-        private static void Init()
-        {
-            GetWindow<MapEditor>().Show();
-            _terrains = Resources.LoadAll<GameObject>("Terrain");
-        }
-
-        private void SceneGUI(SceneView sceneView)
+        
+        private void OnSceneGUI()
         {
             GameObject map =
                 Selection.gameObjects.FirstOrDefault(gameObject => gameObject.GetComponent<BoardController>() != null);
             
             if (map != null && _layerSelection > 0)
             {
-                Event e = Event.current;
                 int controlId = GUIUtility.GetControlID(FocusType.Passive);
+                Event e = Event.current;
                 HandleUtility.AddDefaultControl(controlId);
 
                 switch (e.GetTypeForControl(controlId))
@@ -40,14 +33,12 @@ namespace Editor
                 }
             }
         }
-
-        private void OnEnable()
+        
+        public override void OnInspectorGUI()
         {
-            SceneView.onSceneGUIDelegate += SceneGUI;
-        }
-
-        public void OnGUI()
-        {
+            //TODO: auslagern
+            base.OnInspectorGUI();
+            _terrains = Resources.LoadAll<GameObject>("Terrain");
             _layerSelection = GUILayout.SelectionGrid(_layerSelection, _layerOptions, 3);
             _terrainSelection = GUILayout.SelectionGrid(_terrainSelection, extractTexture(_terrains), 5);
         }

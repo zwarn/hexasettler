@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 814582101}
   - component: {fileID: 814582103}
   - component: {fileID: 814582102}
+  - component: {fileID: 814582104}
   m_Layer: 0
   m_Name: Map
   m_TagString: Untagged
@@ -239,7 +240,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &814582102
 MonoBehaviour:
@@ -262,33 +263,16 @@ Grid:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 814582100}
   m_Enabled: 1
-  m_CellSize: {x: 1.4, y: 1.2, z: 1}
+  m_CellSize: {x: 0.857, y: 1, z: 1}
   m_CellGap: {x: 0, y: 0, z: 0}
   m_CellLayout: 1
   m_CellSwizzle: 0
---- !u!1 &1433407591
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1433407594}
-  - component: {fileID: 1433407593}
-  - component: {fileID: 1433407592}
-  m_Layer: 0
-  m_Name: Scripts
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1433407592
+--- !u!114 &814582104
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1433407591}
+  m_GameObject: {fileID: 814582100}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdf39b3ae17d94f4b8246a1b0cbaed90, type: 3}
@@ -297,30 +281,3 @@ MonoBehaviour:
   TileObject: {fileID: 1583421173471986, guid: 70459ad15e8e0cd4ba99d18912a5346f, type: 2}
   RoadObject: {fileID: 1302908940732174, guid: 3b6dd2257f975f94583a6a35c9f99a17, type: 2}
   Map: {fileID: 814582100}
---- !u!114 &1433407593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1433407591}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 757a0c476a765f941803b492b1695c3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Size: 5
-  DeltaX: 1.735
-  DeltaY: 1.5
---- !u!4 &1433407594
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1433407591}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.5855446, y: -0.5949184, z: -0.19990891}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
