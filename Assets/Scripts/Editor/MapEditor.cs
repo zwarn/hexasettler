@@ -5,11 +5,13 @@ using UnityEngine;
 
 namespace Editor
 {
+    public enum Layer {Terrain, Objects}
+    
     [CustomEditor( typeof( BoardController))]
     public class MapEditor : UnityEditor.Editor
     {
         private int _layerSelection;
-        private string[] _layerOptions = {"nothing", "terrain", "objects"};
+        private string[] _layerOptions = {"nothing", "Terrain", "Objects"};
         private int _terrainSelection;
         private static GameObject[] _terrains;
         
@@ -51,27 +53,14 @@ namespace Editor
 
         private void spawmObject(Vector3 mousePosition, GameObject objectToSpawn)
         {
-            //TODO: spawn under child
-            //TODO: undo, redo
             Grid grid = ((BoardController) target).GetComponent<Grid>();
             GameObject map = ((BoardController) target).gameObject;
-            Debug.Log(map.name);
             
             var clickWorldPosition = HandleUtility.GUIPointToWorldRay (mousePosition).origin;
             Vector3Int clickCellPosition = grid.WorldToCell(clickWorldPosition);
-            Vector3 cellCenterWorld = grid.GetCellCenterWorld(clickCellPosition);
-
-            Transform cellTransform = map.transform.Find(clickCellPosition.ToString());
-            if (cellTransform == null)
-            {
-                GameObject cell = new GameObject(clickCellPosition.ToString());
-                cell.transform.parent = map.transform;
-                cellTransform = cell.transform;
-            }
-
-            GameObject terrain = Instantiate(objectToSpawn, cellCenterWorld, Quaternion.identity);
-            terrain.transform.parent = cellTransform;
-
+           
+            //TODO: layer
+            MapUtil.paintTile(map, Layer.Terrain, grid, objectToSpawn, clickCellPosition);
         }
     }
 }
