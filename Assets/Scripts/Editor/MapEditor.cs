@@ -24,14 +24,9 @@ namespace Editor
                 switch (e.GetTypeForControl(controlId))
                 {
                     case EventType.MouseDown:
-                        Debug.Log(e.button);
                         if (e.button == 0)
                         {
-                            Grid grid = ((BoardController) target).GetComponent<Grid>();
-                            var clickWorldPosition = HandleUtility.GUIPointToWorldRay (e.mousePosition).origin;
-                            Vector3Int clickCellPosition = grid.WorldToCell(clickWorldPosition);
-                            Vector3 cellCenterWorld = grid.GetCellCenterWorld(clickCellPosition);
-                            spawmObject(cellCenterWorld, _terrains[_terrainSelection]);
+                            spawmObject(e.mousePosition, _terrains[_terrainSelection]);
                             e.Use();
                         }
                         break;
@@ -54,12 +49,29 @@ namespace Editor
                 .Select(renderer => renderer.sprite.texture).ToArray();
         }
 
-        private void spawmObject(Vector3 position, GameObject objectToSpawn)
+        private void spawmObject(Vector3 mousePosition, GameObject objectToSpawn)
         {
             //TODO: spawn under child
             //TODO: undo, redo
-//            GameObject map = ((BoardController) target).gameObject;
-            Instantiate(objectToSpawn, position, Quaternion.identity);
+            Grid grid = ((BoardController) target).GetComponent<Grid>();
+            GameObject map = ((BoardController) target).gameObject;
+            Debug.Log(map.name);
+            
+            var clickWorldPosition = HandleUtility.GUIPointToWorldRay (mousePosition).origin;
+            Vector3Int clickCellPosition = grid.WorldToCell(clickWorldPosition);
+            Vector3 cellCenterWorld = grid.GetCellCenterWorld(clickCellPosition);
+
+            Transform cellTransform = map.transform.Find(clickCellPosition.ToString());
+            if (cellTransform == null)
+            {
+                GameObject cell = new GameObject(clickCellPosition.ToString());
+                cell.transform.parent = map.transform;
+                cellTransform = cell.transform;
+            }
+
+            GameObject terrain = Instantiate(objectToSpawn, cellCenterWorld, Quaternion.identity);
+            terrain.transform.parent = cellTransform;
+
         }
     }
 }
