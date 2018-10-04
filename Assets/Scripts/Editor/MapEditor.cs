@@ -57,6 +57,7 @@ namespace Editor
             GameObject map = ((BoardController) target).gameObject;
             
             var clickWorldPosition = HandleUtility.GUIPointToWorldRay (mousePosition).origin;
+            clickWorldPosition.z = 0;
             Vector3Int clickCellPosition = grid.WorldToCell(clickWorldPosition);
            
             //TODO: layer
