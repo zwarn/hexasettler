@@ -61,7 +61,7 @@ namespace Editor
             Vector3Int clickCellPosition = grid.WorldToCell(clickWorldPosition);
            
             //TODO: layer
-            MapUtil.paintTile(map, Layer.Terrain, grid, objectToSpawn, clickCellPosition);
+            MapUtil.PaintTile(map, Layer.Terrain, grid, objectToSpawn, clickCellPosition);
         }
     }
 }

@@ -1,10 +1,11 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 
 namespace Editor
 {
-	public class MapUtil {
+	public static class MapUtil {
 
-		public static void paintTile(GameObject map, Layer layer, Grid grid, GameObject tile, Vector3Int position)
+		public static void PaintTile(GameObject map, Layer layer, Grid grid, GameObject tile, Vector3Int position)
 		{
 			
 			Vector3 cellCenterWorld = grid.GetCellCenterWorld(position);
@@ -24,18 +25,18 @@ namespace Editor
 				layerTransform = layerObject.transform;
 			}
 
-			//TODO: undo support
 			if (layerTransform.childCount > 0)
 			{
 				// remove and add
 				foreach (Transform child in layerTransform)
 				{
-					Object.DestroyImmediate(child.gameObject);
+					Undo.DestroyObjectImmediate(child.gameObject);
 				}
 			}
 
-			GameObject terrain = Object.Instantiate(tile, cellCenterWorld, Quaternion.identity);
-			terrain.transform.parent = layerTransform;
+			GameObject instance = Object.Instantiate(tile, cellCenterWorld, Quaternion.identity);
+			Undo.RegisterCreatedObjectUndo(instance, "create object");
+			Undo.SetTransformParent(instance.transform, layerTransform, "set transform");
 		}
 	}
 }

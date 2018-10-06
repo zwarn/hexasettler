@@ -29,23 +29,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="3604" />
+          <entry key="cs" value="3714" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="3604" />
+          <entry key="C#" value="3714" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Editor/MapEditor.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="730">
-              <caret line="59" column="37" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
+            <state relative-caret-position="790">
+              <caret line="63" column="26" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
               <folding>
                 <marker date="1538664303428" expanded="true" signature="6:70" ph="..." />
                 <marker date="1538664303428" expanded="true" signature="88:2423" ph="{...}" />
@@ -62,19 +62,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Editor/MapUtil.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+            <state relative-caret-position="555">
+              <caret line="37" column="67" selection-start-line="37" selection-start-column="67" selection-end-line="37" selection-end-column="67" />
               <folding>
-                <marker date="1538658502014" expanded="true" signature="36:1106" ph="{...}" />
-                <marker date="1538658502014" expanded="true" signature="61:1104" ph="{...}" />
-                <marker date="1538658502014" expanded="true" signature="172:1101" ph="{...}" />
-                <marker date="1538658502014" expanded="true" signature="344:492" ph="{...}" />
-                <marker date="1538658502014" expanded="true" signature="592:759" ph="{...}" />
-                <marker date="1538658502014" expanded="true" signature="822:962" ph="{...}" />
-                <marker date="1538658502014" expanded="true" signature="897:957" ph="{...}" />
+                <marker date="1538815556320" expanded="true" signature="6:37" ph="..." />
+                <marker date="1538815556320" expanded="true" signature="55:1203" ph="{...}" />
+                <marker date="1538815556320" expanded="true" signature="80:1201" ph="{...}" />
+                <marker date="1538815556320" expanded="true" signature="191:1198" ph="{...}" />
+                <marker date="1538815556320" expanded="true" signature="363:511" ph="{...}" />
+                <marker date="1538815556320" expanded="true" signature="611:778" ph="{...}" />
+                <marker date="1538815556320" expanded="true" signature="817:961" ph="{...}" />
+                <marker date="1538815556320" expanded="true" signature="892:956" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -128,8 +129,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/model/map/Road.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/model/map/Map.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/controller/MapHelper.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/MapUtil.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Editor/MapEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Editor/MapUtil.cs" />
       </list>
     </option>
   </component>
@@ -415,26 +416,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Editor/MapUtil.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="44" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-          <folding>
-            <marker date="1538658502014" expanded="true" signature="36:1106" ph="{...}" />
-            <marker date="1538658502014" expanded="true" signature="61:1104" ph="{...}" />
-            <marker date="1538658502014" expanded="true" signature="172:1101" ph="{...}" />
-            <marker date="1538658502014" expanded="true" signature="344:492" ph="{...}" />
-            <marker date="1538658502014" expanded="true" signature="592:759" ph="{...}" />
-            <marker date="1538658502014" expanded="true" signature="822:962" ph="{...}" />
-            <marker date="1538658502014" expanded="true" signature="897:957" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Editor/MapEditor.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="730">
-          <caret line="59" column="37" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
+        <state relative-caret-position="790">
+          <caret line="63" column="26" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="26" />
           <folding>
             <marker date="1538664303428" expanded="true" signature="6:70" ph="..." />
             <marker date="1538664303428" expanded="true" signature="88:2423" ph="{...}" />
@@ -446,6 +431,23 @@
             <marker date="1538664303428" expanded="true" signature="1188:1543" ph="{...}" />
             <marker date="1538664303428" expanded="true" signature="1611:1816" ph="{...}" />
             <marker date="1538664303428" expanded="true" signature="1899:2415" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Editor/MapUtil.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="67" selection-start-line="37" selection-start-column="67" selection-end-line="37" selection-end-column="67" />
+          <folding>
+            <marker date="1538815556320" expanded="true" signature="6:37" ph="..." />
+            <marker date="1538815556320" expanded="true" signature="55:1203" ph="{...}" />
+            <marker date="1538815556320" expanded="true" signature="80:1201" ph="{...}" />
+            <marker date="1538815556320" expanded="true" signature="191:1198" ph="{...}" />
+            <marker date="1538815556320" expanded="true" signature="363:511" ph="{...}" />
+            <marker date="1538815556320" expanded="true" signature="611:778" ph="{...}" />
+            <marker date="1538815556320" expanded="true" signature="817:961" ph="{...}" />
+            <marker date="1538815556320" expanded="true" signature="892:956" ph="{...}" />
           </folding>
         </state>
       </provider>
