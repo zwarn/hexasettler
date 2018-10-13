@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Boo.Lang.Runtime;
 using UnityEditor;
 using UnityEngine;
 
@@ -13,7 +14,9 @@ namespace Editor
         private int _layerSelection;
         private string[] _layerOptions = {"nothing", "Terrain", "Objects"};
         private int _terrainSelection;
+        private int _objectSelection;
         private static GameObject[] _terrains;
+        private static GameObject[] _objects;
         
         private void OnSceneGUI()
         {   
@@ -28,12 +31,42 @@ namespace Editor
                     case EventType.MouseDown:
                         if (e.button == 0)
                         {
-                            spawmObject(e.mousePosition, _terrains[_terrainSelection]);
+                            spawmObject(e.mousePosition, selectedTile());
                             e.Use();
                         }
                         break;
                 }
             }
+        }
+
+        private GameObject selectedTile()
+        {
+            if (_layerSelection == 1)
+            {
+                return _terrains[_terrainSelection];
+            }
+
+            if (_layerSelection == 2)
+            {
+                return _objects[_objectSelection];
+            }
+
+            return null;
+        }
+
+        private Layer getSelectedLayer()
+        {
+            if (_layerSelection == 1)
+            {
+                return Layer.Terrain;
+            }
+
+            if (_layerSelection == 2)
+            {
+                return Layer.Objects;
+            }
+
+            throw new RuntimeException("unknown selected Layer");
         }
         
         public override void OnInspectorGUI()
@@ -41,14 +74,15 @@ namespace Editor
             base.OnInspectorGUI();
             //TODO: auslagern do once
             _terrains = Resources.LoadAll<GameObject>("Terrain");
+            _objects = Resources.LoadAll<GameObject>("Objects");
             _layerSelection = GUILayout.SelectionGrid(_layerSelection, _layerOptions, 3);
             _terrainSelection = GUILayout.SelectionGrid(_terrainSelection, extractTexture(_terrains), 5);
+            _objectSelection = GUILayout.SelectionGrid(_objectSelection, extractTexture(_objects), 5);
         }
 
         private Texture[] extractTexture(GameObject[] gameObjects)
         {
-            return gameObjects.Select(o => o.GetComponent<SpriteRenderer>()).Where(renderer => renderer != null)
-                .Select(renderer => renderer.sprite.texture).ToArray();
+            return gameObjects.Select(o => AssetPreview.GetAssetPreview(o)).ToArray();
         }
 
         private void spawmObject(Vector3 mousePosition, GameObject objectToSpawn)
@@ -60,8 +94,7 @@ namespace Editor
             clickWorldPosition.z = 0;
             Vector3Int clickCellPosition = grid.WorldToCell(clickWorldPosition);
            
-            //TODO: layer
-            MapUtil.PaintTile(map, Layer.Terrain, grid, objectToSpawn, clickCellPosition);
+            MapUtil.PaintTile(map, getSelectedLayer(), grid, objectToSpawn, clickCellPosition);
         }
     }
 }
