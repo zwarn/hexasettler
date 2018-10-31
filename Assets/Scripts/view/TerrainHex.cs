@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace view
 {
-    public class HexView : MonoBehaviour {
+    public class TerrainHex : MonoBehaviour {
 
         private Hex _hex;
         private BoardController _boardController;

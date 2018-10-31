@@ -1,6 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
+using Object = System.Object;
 
 namespace model.position
 {
@@ -13,6 +14,12 @@ namespace model.position
         {
             this.x = x;
             this.y = y;
+        }
+
+        public TilePosition(Vector3 worldPosition)
+        {
+            x = Mathf.RoundToInt(worldPosition.x);
+            y = Mathf.RoundToInt(worldPosition.y);
         }
 
         public static TilePosition operator +(TilePosition p1, TilePosition p2)

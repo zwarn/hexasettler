@@ -6,8 +6,6 @@ using UnityEngine;
 
 namespace Editor
 {
-    public enum Layer {Terrain, Objects}
-    
     [CustomEditor( typeof( BoardController))]
     public class MapEditor : UnityEditor.Editor
     {

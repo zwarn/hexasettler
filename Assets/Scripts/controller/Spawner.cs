@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour {
 
     public GameObject SpawnHex(int x, int y)
     {
-        Vector3 position = _boardController.CoordToVector3(x, y);
+        Vector3 position = _boardController.grid.CellToWorld(new Vector3Int(x, y, 0));
         GameObject newTile = Instantiate(TileObject, position, Quaternion.identity, Map.transform);
         newTile.name = x + " : " + y;
         return newTile;
@@ -38,7 +38,7 @@ public class Spawner : MonoBehaviour {
 
     public GameObject SpawnRoad(TilePosition tilePosition, GameObject parent)
     {
-        Vector3 position = _boardController.CoordToVector3(tilePosition.x, tilePosition.y);
+        Vector3 position = _boardController.grid.CellToWorld(new Vector3Int(tilePosition.x, tilePosition.y, 0));
         return Instantiate(RoadObject, position, Quaternion.identity, parent.transform);
     }
 }

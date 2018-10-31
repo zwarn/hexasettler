@@ -1,19 +1,17 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using controller;
+using Editor;
 using model.map;
+using model.position;
 using UnityEngine;
 
 public class BoardController : MonoBehaviour {
     public static BoardController Instance { get; private set; }
 
-    public int Size = 5;
-    public float DeltaX = 1.735f;
-    public float DeltaY = 1.5f;
-
     private Hex _currentlySelected;
-    private Map _map;
+    internal Grid grid;
+    Map _map;
+    Roads _roads;
 
     void Awake() {
         if (Instance == null)
@@ -22,8 +20,12 @@ public class BoardController : MonoBehaviour {
         }
     }
 
-    void Start () {
-        _map = new Map(Size);
+    void Start ()
+    {
+        grid = GetComponent<Grid>();
+        _map = new Map();
+        _roads = new Roads();
+        ImportMap();
 	}
 
     private void Update()
@@ -32,17 +34,47 @@ public class BoardController : MonoBehaviour {
         {
             if (_currentlySelected != null)
             {
-                _currentlySelected.AddRoad();
-                _currentlySelected.Road.UpdateView();
-                var neighborRoads = MapHelper.GetNeighborRoads(_currentlySelected.Position).ToList();
-                neighborRoads.ForEach(road => road.UpdateView());
+                //TODO rework
+//                _currentlySelected.AddRoad();
+//                _currentlySelected.Road.UpdateView();
+//                var neighborRoads = MapHelper.GetNeighborRoads(_currentlySelected.Position).ToList();
+//                neighborRoads.ForEach(road => road.UpdateView());
             }
         }
     }
 
-    public Vector3 CoordToVector3(int x, int y)
+    private void ImportMap()
     {
-        return new Vector3(x * DeltaX + y * DeltaX / 2, y * DeltaY);
+        foreach (Transform child in transform)
+        {
+            TilePosition position = new TilePosition(grid.WorldToCell(child.position));
+            Dictionary<Layer, GameObject> layers = ExtractGameObjectPerLayer(child);
+            Hex hex = new Hex(position, layers);
+            
+            _map.AddHex(position, hex);
+            
+        }
+    }
+
+    private Dictionary<Layer, GameObject> ExtractGameObjectPerLayer(Transform child)
+    {
+        Dictionary<Layer, GameObject> layers = new Dictionary<Layer, GameObject>();
+        foreach (Layer layer in Enum.GetValues(typeof(Layer)))
+        {
+            GameObject gameObject = gameObjectFromLayer(child, layer);
+            if (gameObject != null)
+            {
+                layers.Add(layer, gameObject);
+            }
+        }
+
+        return layers;
+    }
+    
+    private GameObject gameObjectFromLayer(Transform transform, Layer layer)
+    {
+        var child = transform.Find(layer.ToString());
+        return child == null ? null : child.gameObject;
     }
 
     public void SelectedTile(Hex hex)

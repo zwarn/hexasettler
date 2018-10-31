@@ -7,8 +7,6 @@ namespace view
 {
     public class RoadView : MonoBehaviour {
 
-        private Road _road;
-
         public GameObject roadE;
         public GameObject roadSE;
         public GameObject roadSW;
@@ -16,7 +14,7 @@ namespace view
         public GameObject roadNW;
         public GameObject roadNE;
 
-        public void UpdateView(Dictionary<BaseDirection, Road> neighboRoads)
+        public void UpdateView(Dictionary<BaseDirection, GameObject> neighboRoads)
         {
             roadE.GetComponent<SpriteRenderer>().enabled = neighboRoads[BaseDirection.East] != null;
             roadSE.GetComponent<SpriteRenderer>().enabled = neighboRoads[BaseDirection.SouthEast] != null;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Boo.Lang.Runtime;
 using model.position;
 using UnityEngine;
 
@@ -18,25 +19,25 @@ namespace model.map
         public Hex Hex(TilePosition position)
         {
             return _hexes.ContainsKey(position) ? _hexes[position] : null;
-        } 
+        }
 
-        public Map(int size)
+        public void AddHex(TilePosition position, Hex hex)
+        {
+            _hexes.Add(position, hex);
+        }
+
+        public Map()
         {
             if (_instance == null)
             {
                 _instance = this;
             }
+            else
+            {
+                throw new RuntimeException("trying to create new map");
+            }
             
             _hexes = new Dictionary<TilePosition, Hex>();
-            for (var x = -size; x <= size; x++)
-            {
-                for (var y = -size; y <= +size; y++)
-                {
-                    if (Mathf.Abs(x + y) > size) continue;
-                    var tilePosition = new TilePosition(x, y);
-                    _hexes.Add(tilePosition, new Hex(tilePosition));
-                }
-            }
         }
     }
 }

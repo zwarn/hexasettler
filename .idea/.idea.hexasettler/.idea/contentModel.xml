@@ -21,8 +21,10 @@
           <e p="model" t="Include">
             <e p="map" t="Include">
               <e p="Hex.cs" t="Include" />
+              <e p="Layer.cs" t="Include" />
               <e p="Map.cs" t="Include" />
               <e p="Road.cs" t="Include" />
+              <e p="Roads.cs" t="Include" />
             </e>
             <e p="Position" t="Include">
               <e p="BaseDirection.cs" t="Include" />
@@ -30,8 +32,8 @@
             </e>
           </e>
           <e p="view" t="Include">
-            <e p="HexView.cs" t="Include" />
             <e p="RoadView.cs" t="Include" />
+            <e p="TerrainHex.cs" t="Include" />
           </e>
         </e>
       </e>

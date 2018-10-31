@@ -14,6 +14,7 @@ namespace Editor
 			{
 				GameObject cell = new GameObject(position.ToString());
 				cell.transform.parent = map.transform;
+				cell.transform.localPosition = cellCenterWorld;
 				cellTransform = cell.transform;
 			}
 

@@ -1,26 +1,19 @@
-﻿using model.position;
+﻿using System.Collections.Generic;
+using Editor;
+using model.position;
 using UnityEngine;
-using view;
 
 namespace model.map
 {
     public class Hex
     {
-        public Road Road { get; private set; }
         public TilePosition Position { get; private set; }
-        public GameObject GameObject { get; private set; }
+        public Dictionary<Layer, GameObject> Layers { get; private set; }
 
-        public Hex(TilePosition tilePosition)
+        public Hex(TilePosition tilePosition, Dictionary<Layer, GameObject> layers)
         {
             Position = tilePosition;
-            GameObject = Spawner.Instance.SpawnHex(Position.x, Position.y);
-            HexView hexView = GameObject.GetComponent<HexView>();
-            hexView.Link(this);
-        }
-
-        public void AddRoad()
-        {
-            Road = new Road(this);
+            Layers = layers;
         }
     }
 }
